@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerbaNet</title>
+  <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #121111;
+      line-height: 1.6;
+      background-color: #eff5f9 ;
+    }
+    
+    a {
+      text-decoration:none;
+      color: inherit;
+    }
+    
+    button {
+      background-color: #10b53e;
+      color: #f4f1f1;
+      padding: 30px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    
+    button:hover {
+      background-color: #da0d0d;
+    }
+    
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #042e4a;
+    }
+    
+    .navbar .logo {
+      font-size: 24px;
+      color: #f7f1f1;
+      font-weight: bold;
+    }
+    
+    .navbar nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .navbar nav ul li a {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    
+    .navbar nav ul li a:hover {
+      color: #e9d200;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://img.pikbest.com/wp/202345/purple-abstract-art-wallpaper-neon-light-background-in-3d-rendering-perfect-for-scifi-technology-concept-product-display-showroom-illustration-and_9617354.jpg!bw700') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .hero-content h1 {
+      font-size: 100px;
+      margin-bottom: 10px;
+    }
+    
+    .hero-content p {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    
+    /* About Section */
+    .section {
+      padding: 50px 30px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin:  auto;
+      padding:  35px;
+    }
+    
+    h2 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      gap: 60px;
+    }
+    
+    .service-card {
+      flex: 1;
+      padding: 20px;
+      background-color: #12a6cb;
+      box-shadow: 0 2px 5px rgba(14, 14, 14, 0.1);
+      text-align:center;
+    }
+    
+    .service-card button {
+      background-color: #12a6cb;
+      color: #f4f1f1;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 50px;
+      border-radius: 5px;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #da920d;
+    }
+    
+    .service-card p {
+      font-size: 20px;
+    }
+    /* Dark Background */
+    .dark-bg {
+      background-color: #0c0d6d;
+      color: #fcfbfb;
+    }
+    
+    /* Contact Section */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #3a62b3;
+      border-radius: 5px;
+    }
+    
+    input:focus, textarea:focus {
+      border-color: #3716b9;
+      outline: none;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">VERBANET</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Features</a></li>
+          <li><a href="#contact">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to VerbaNet</h1>
+      <p>A network for understanding words.</p>
+      <button onclick="window.location.href='#services'">Explore Our Services</button>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a group of three strudents that have decided to create one in all platform that solves most of the common problems that the youth of today's era faces.
+        We aim at solving some of the grammatical and text based problems with the help of AI and make your task easier. We hope that you enjoy the user experience of 
+        our beloved AI companion. 
+        We are looking forward to expand it more and to bring some more ideas to life. 
+      </p>
+    </div>
+  </section>
+
+  <section id="services" class="section dark-bg">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <form action="/summarization">
+            <button type="submit">Text Summarization</button>
+          </form>
+            <p>The process of creating a brief and accurate summary of a longer text.</p>
+        </div>
+        <div class="service-card">
+          <form action="/sentiment">
+            <button type="submit">Sentiment Analysis</button>
+          </form>
+            <p>A process of understanding natural language (text) by extracting insightful information such as context, emotions, and sentiments from unstructured data.</p>
+        </div>
+        <div class="service-card">
+          <form action="/main">
+            <button type="submit">Grammer and Spell Checker</button>
+          </form>
+            <p>That identifies and corrects grammatical and spelling errors in written content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>FeedBack</h2>
+      <form action="#">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 VerbaNet. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
